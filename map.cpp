@@ -76,7 +76,7 @@ void map::reset() {
 
     for (int i = 0; i < leftCount; i++) {
         recFormat rec;
-        rec.obstacle = rand() % (max_h + 1);
+        rec.obstacle = max_h - 1 - (int)sqrt(rand() % max_h*max_h + 1);
         rec.item = (rand() % 10 == 0) ? 1 : 0;
         outL << rec.obstacle << ' ' << rec.item << endl;
         //로드된 맵 왼쪽 생성, 파일에 저장
@@ -88,7 +88,7 @@ void map::reset() {
     ofstream outR("out_of_mapR.txt", /*ios::binary | */ios::trunc);
     for (int i = 0; i < rightCount; i++) {
         recFormat rec;
-        rec.obstacle = rand() % (max_h + 1);
+        rec.obstacle = max_h - 1 - (int)sqrt(rand() % max_h*max_h + 1);
          rec.item = (rand() % 10 == 0) ? 1 : 0;
          outR << rec.obstacle << ' ' << rec.item << endl;
         //로드된 맵 오른쪽 생성, 파일에 저장
