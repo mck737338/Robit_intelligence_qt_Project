@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1280</width><height>800</height></rect>
+  </property>
+  <property name="windowTitle"><string>2D RPG</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+
+      <!-- Page 0: 시작 화면 -->
+      <widget class="QWidget" name="pageStart">
+       <layout class="QVBoxLayout">
+        <item><widget class="QLabel" name="labelTitle">
+          <property name="text"><string>2D 횡스크롤 RPG</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+        </widget></item>
+        <item><widget class="QPushButton" name="btnStart">
+          <property name="text"><string>시작</string></property>
+        </widget></item>
+       </layout>
+      </widget>
+
+      <!-- Page 1: 직업 선택 화면 -->
+      <widget class="QWidget" name="pageClassSelect">
+       <layout class="QVBoxLayout">
+        <item><widget class="QLabel" name="labelSelectTitle">
+          <property name="text"><string>직업을 선택하세요 (A/D 또는 ←/→)</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+        </widget></item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QPushButton" name="btnPrevClass">
+            <property name="text"><string>&lt;</string></property>
+          </widget></item>
+          <item><widget class="QLabel" name="labelClassName">
+            <property name="alignment"><set>Qt::AlignCenter</set></property>
+          </widget></item>
+          <item><widget class="QPushButton" name="btnNextClass">
+            <property name="text"><string>&gt;</string></property>
+          </widget></item>
+         </layout>
+        </item>
+        <item><widget class="QPushButton" name="btnSelectClass">
+          <property name="text"><string>선택</string></property>
+        </widget></item>
+       </layout>
+      </widget>
+
+      <!-- Page 2: 게임 화면 -->
+      <widget class="QWidget" name="pageGame">
+       <layout class="QVBoxLayout" name="pageGameLayout">
+        <item><widget class="QWidget" name="gameContainer"/></item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
